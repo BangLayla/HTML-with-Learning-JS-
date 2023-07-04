@@ -1,0 +1,113 @@
+:root{
+    --main--color: #aa1005;
+}
+body{
+    font-family:'Open Sans' , sans-serif;
+}
+/*setting box*/
+.settings-box{
+    position: fixed;/*whatdoesitmean?*/
+    top: 0;
+    left: -200px;
+    background-color: #FFF;
+    z-index: 100;
+    width: 200px;
+    min-height: 100vh;
+    transition:.3s;
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+}
+.settings-box .fa-gear{
+    position: absolute;
+    background-color: #FFF;
+    text-align: center;
+    width: 30px;
+    top:100px;
+    right:-30px;
+    padding: 8px 0;
+    cursor: pointer; /*focus on this*/
+
+}
+.settings-box .settings-content{
+
+}
+/*landing page*/
+.landing-page{
+    min-height: 100vh;
+    background-image: url(../Pics/1.jpeg);
+    background-size: cover; /*for filling the page*/
+    position: relative;
+}
+.landing-page .overlay{
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    z-index: 1;
+}
+.header-area{
+    position: relative; /*why?*/
+    z-index: 2;
+    color: white;
+    display: flex;
+    padding: 10px;
+}
+.header-area .logo{
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+}
+.header-area .links{
+    list-style: none;
+    text-align: right;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 15px; /*it is necessary to put text aligin and determine its value so the padding property works properly*/
+    font-size: 15px;
+}
+.header-area .links li{
+    display: inline-block;
+    margin-left: 10px;
+}
+.header-area .links li a{
+    color: #FFF;
+    text-decoration: none;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.header-area .links li a:hover,
+.header-area .links li a.active{
+    color: var(--main--color);
+}
+.introduction-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+.introduction-text h1{
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+.introduction-text h1 span{
+    color: var(--main--color);
+}
+.introduction-text p{
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0;
+}
